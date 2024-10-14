@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <h1>Admin Dashboard</h1>
+    
+    <div class="dashboard-content">
+        <h2>Welcome, Admin!</h2>
+        <p>This is your admin dashboard where you can manage your e-commerce site.</p>
+
+        <div class="section">
+            <h3>Add Products</h3>
+            <button onclick="addProduct()">Add New Product</button>
+        </div>
+
+        <div class="section">
+            <h3>View Customers</h3>
+            <button onclick="viewCustomers()">View All Customers</button>
+        </div>
+
+        <div class="section">
+            <h3>View Orders</h3>
+            <button onclick="viewOrders()">View All Orders</button>
+        </div>
+
+        <a href="#" onclick="logout()">Logout</a>
+
+        <!-- Logout Script -->
+        <script src="script.js"></script>
+
+    </div>
+</div>
+
+<style>
+.dashboard-container {
+    width: 80%;
+    margin: auto;
+}
+
+.dashboard-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+button {
+   margin-top: 10px; 
+   padding: 10px;
+   background-color:afd9f1;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: #45a0b2;
+}
+</style>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Customers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="customers-container">
+    <h2>All Customers</h2>
+
+    <!-- Sample customer data -->
+    <table id="customersTable">
+        <thead>
+            <tr><th>Name</th><th>Email</th><th>Phone Number</th></tr></thead>
+        <tbody></tbody>
+    </table>
+
+<script>
+// Sample customer data for demonstration
+const customers = [
+    { name: "Maya Jain", email: "mayaj23@example.com", phone: "123-456-7890" },
+    { name: "Sanjay Kumar", email: "sk58962@example.com", phone: "098-765-4321" },{ name: "Priya Mishra", email: "pmish45672@example.com", phone: "085-705-4891" },
+    ];
+
+
+// Populate the customers table
+const tbody = document.querySelector("#customersTable tbody");
+customers.forEach(customer => {
+    const row = `<tr><td>${customer.name}</td><td>${customer.email}</td><td>${customer.phone}</td></tr>`;
+    tbody.innerHTML += row;
+});
+</script>
+
+<style>
+.customers-container {
+    width: 80%;
+    margin: auto;
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+th, td {
+   padding: 10px;
+   text-align: left;
+   border-bottom: 1px solid #ddd;
+}
+</style>
+
+<a href="#" onclick='window.history.back()'>Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

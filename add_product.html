@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="add-product-container">
+    <h2>Add New Product</h2>
+    <form id="addProductForm">
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="text" id="productPrice" placeholder="Product Price" required>
+        <textarea id="productDescription" placeholder="Product Description"></textarea>
+        <button type="submit">Add Product</button>
+        <p id="message" class=""></p>
+    </form>
+
+    <!-- Script to handle form submission -->
+    <script src="script.js"></script>
+
+<style>
+.add-product-container {
+    width: 50%;
+    margin: auto;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+   margin-top: 10px; 
+   padding: 10px;
+   background-color: #a3e0ec;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.success {
+    color: green; 
+}
+</style>
+
+</div>
+
+<script>
+// Handle adding a product
+document.getElementById("addProductForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const productName = document.getElementById("productName").value;
+    const productPrice = document.getElementById("productPrice").value;
+
+    // Simulate adding product (In real application, send data to server)
+    document.getElementById("message").textContent = `Product "${productName}" added successfully!`;
+    document.getElementById("message").className = "success";
+    
+    // Clear form fields
+    document.getElementById("addProductForm").reset();
+});
+</script>
+
+</body>
+</html>
